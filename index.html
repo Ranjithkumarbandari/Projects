@@ -5,290 +5,311 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RK SOLUTIONS</title>
     <style>
-body, ul {
-    font-family: Arial, sans-serif;
-  line-height: 1.6;
-  margin: 0;
-  padding: 0;
-  background-color: #f4f4f4d0;
-  color: #333;
-}
-::selection{
-  background-color: pink;
-}
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
 
-.a {
-    background-color: #333;
-    padding: 10px 20px;
-}
+        ::selection {
+            background-color: #9e19e6;
+            color: white;
+        }
 
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
 
-.nav-list {
-    list-style-type: none;
-    display: flex;
-    justify-content: space-evenly;
+        /* Header and Navigation */
+        header {
+            background-color: #333;
+            padding: 10px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
 
-}
+        .nav-list {
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 0;
+            margin: 0;
+        }
 
+        .nav-item {
+            margin: 0 10px;
+        }
 
-.nav-item {
-    margin-right: 20px;
-    text-decoration: none;
-    background-color: #9e19e6;
-    height: 30px;
-    
-    align-items: baseline;
-}
+        .nav-link {
+            color: white;
+            font-size: 18px;
+            padding: 10px 15px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            border-radius: 5px;
+        }
 
+        .nav-link:hover {
+            background-color: #555;
+            transform: translateY(-3px);
+        }
 
-.nav-link {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    padding: 5px 10px;
-    transition: background-color 0.3s ease;
-}
+        #name {
+            font-size: 24px;
+            font-weight: bold;
+            color: #9e19e6;
+            background-color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: transform 0.3s ease;
+        }
 
-#one{
-    display: flex;
-    content:center;
-    justify-content: end;
-    padding:10px;
-    align-items: center;
-}
-#one:hover{
-    background-color: rgba(245, 245, 245, 0.788);
-}
-#one:active{
-    background-color: #9e19e6;
-}
-#name{
-  background-color: aliceblue;
-  color:black;
-    display: flex;
-    content:center;
-    justify-content: end;
-    align-items: center;
-    text-decoration: none;
-    font-size: 30px;
-    padding: 5px 10px;
-    transition: background-color 0.3s ease;
-}
-#name:hover{
-    background-color: rgb(245, 245, 245);
-}
-#name:active{
-    background-color: #9e19a6;
-}
+        #name:hover {
+            transform: scale(1.05);
+        }
 
-.nav-link:hover {
-    background-color: #555;
-    border-radius: 5px;
-} 
-.profile-section {
-    text-align: center;
-    padding: 50px 20px;
-    background-color: #0073e6;
-    color: white;
-    height: 300px;
-}
+        /* Hero Section */
+        .profile-section {
+            text-align: center;
+            padding: 100px 20px;
+            background-color: #0073e6;
+            color: white;
+        }
 
-.profile-image {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: 5px solid white;
-    margin-bottom: 20px;
-}
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid white;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
 
-.profile-name {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-}
+        .profile-image:hover {
+            transform: scale(1.1);
+        }
 
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  margin: 0;
-  padding: 0;
-  background-color: #14e9f4;
-  color: #333;
-}
+        .profile-name {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
 
-.container {
-  width: 80%;
-  margin: auto;
-  overflow: hidden;
-}
+        /* About Section */
+        #about {
+            padding: 50px 20px;
+            background-color: white;
+            text-align: center;
+        }
 
-header {
-  background: #333;
-  color: #fff;
-  padding: 20px 0;
-  text-align: center;
-}
+        .about-image {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
 
-header h1 {
-  margin: 0;
-  font-size: 2.5em;
-}
+        .about-image img {
+            width: 30%;
+            height: auto;
+            border-radius: 10px;
+            margin: 10px;
+            transition: transform 0.3s ease;
+        }
 
-header p {
-  margin: 5px 0 0;
-  font-size: 1.2em;
-}
+        .about-image img:hover {
+            transform: scale(1.05);
+        }
 
-#about, .services, .why-choose-us, #contact {
-  padding: 20px 0;
-  background: #fffa;
-  margin: 10px 0;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-.about-image {
-  flex: 10;
-  text-align: center;
-  flex-direction: row;
-  animation: images 2 5 2 right;
-}
+        /* Services Section */
+        #services {
+            padding: 50px 20px;
+            background-color: #f9f9f9;
+            text-align: center;
+        }
 
-.i{
-  display: flex;
-  flex-direction: row;
-}
-h2 {
-  color: #333;
-  text-align: center;
-  margin-bottom: 20px;
-}
+        .service-list {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
 
-.service-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
+        .service-item {
+            flex: 1 1 45%;
+            background: white;
+            margin: 10px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
 
-.service-item {
-  flex: 1 1 45%;
-  background: #f9f9f9;
-  margin: 10px;
-  padding: 15px;
-  border-radius: 5px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-}
+        .service-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
 
-.service-item h3 {
-  margin-top: 0;
-  color: #333;
-}
+        /* Why Choose Us Section */
+        .why-choose-us {
+            padding: 50px 20px;
+            background-color: white;
+            text-align: center;
+        }
 
+        .why-choose-us ul {
+            list-style: none;
+            padding: 0;
+        }
 
+        .why-choose-us li {
+            margin: 15px 0;
+            font-size: 18px;
+        }
 
-.contact ul li {
-  margin: 10px 0;
-}
+        /* Contact Section */
+        #contact {
+            padding: 50px 20px;
+            background-color: #f9f9f9;
+            text-align: center;
+        }
 
-footer {
-  background: #333;
-  color: #fff;
-  text-align: center;
-  padding: 10px 0;
-  margin-top: 20px;
-}
+        #contact ul {
+            list-style: none;
+            padding: 0;
+        }
 
-footer p {
-  margin: 0;
-}
+        #contact li {
+            margin: 10px 0;
+            font-size: 18px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            .nav-list {
+                flex-direction: column;
+            }
+
+            .nav-item {
+                margin: 10px 0;
+            }
+
+            .about-image img {
+                width: 100%;
+                margin: 10px 0;
+            }
+
+            .service-item {
+                flex: 1 1 100%;
+            }
+        }
     </style>
 </head>
 <body>
     <header>
-        <nav class="a">
+        <nav>
             <ul class="nav-list">
-                <p class="nav-item" id="name">Rk Solution</p>
-                <li class="nav-item" id="one"><a href="#home" class="nav-link">Home</a></li>
-                <li class="nav-item" id="one"><a href="#about" class="nav-link">About</a></li>
-                <li class="nav-item" id="one"><a href="#services" class="nav-link">Services</a></li>
-                <li class="nav-item" id="one"><a href="#contact" class="nav-link">Contact</a></li>
+                <li class="nav-item" id="name">RK Solution</li>
+                <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#services" class="nav-link">Services</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
         </nav>
-
     </header>
     <main>
+        <!-- Hero Section -->
         <section id="home" class="profile-section">
             <div class="profile-content">
                 <img src="https://d1fdloi71mui9q.cloudfront.net/OdN6njTzQmOOVsRiNkfl_Acy2ORD5ieo3Cp3q" alt="Profile Picture" class="profile-image">
                 <h1 class="profile-name">RK Tech Solutions</h1>
                 <p>Welcome to RK Tech Solution</p>
-               
             </div>
         </section>
-        <section class="#about" id="about">
+
+        <!-- About Section -->
+        <section id="about">
             <div class="container">
-              <h2>About Us</h2>
-              <p>At RK Solution, we are dedicated to delivering innovative and tailored solutions to meet your unique needs. With a focus on excellence, reliability, and customer satisfaction, we strive to empower businesses and individuals to achieve their goals efficiently.</p>
-              <div class="about-image">
-                <img src="https://s.tmimgcdn.com/scr/800x500/336100/itsol-technology-amp-it-solutions-website-template_336143-7-original.png" alt="About Us Image" height="200px" width="300px">
-                <img src="https://th.bing.com/th/id/OIP.lvme9Nm-9y1EHWC8RGGUmwHaHa?rs=1&pid=ImgDetMain" alt="image" height="200px" width="300px">
-                <img src="https://static.vecteezy.com/system/resources/previews/001/545/799/non_2x/designer-isometric-landing-page-vector.jpg" alt="image" height="200px" width="300px">
-              </div>
+                <h2>About Us</h2>
+                <p>At RK Solution, we are dedicated to delivering innovative and tailored solutions to meet your unique needs. With a focus on excellence, reliability, and customer satisfaction, we strive to empower businesses and individuals to achieve their goals efficiently.</p>
+                <div class="about-image">
+                    <img src="https://s.tmimgcdn.com/scr/800x500/336100/itsol-technology-amp-it-solutions-website-template_336143-7-original.png" alt="About Us Image 1">
+                    <img src="https://th.bing.com/th/id/OIP.lvme9Nm-9y1EHWC8RGGUmwHaHa?rs=1&pid=ImgDetMain" alt="About Us Image 2">
+                    <img src="https://static.vecteezy.com/system/resources/previews/001/545/799/non_2x/designer-isometric-landing-page-vector.jpg" alt="About Us Image 3">
+                </div>
             </div>
-          </section>
-        
-          <section class="#services" id="services">
+        </section>
+
+        <!-- Services Section -->
+        <section id="services">
             <div class="container">
-              <h2>Our Services</h2>
-              <div class="service-list">
-                <div class="service-item">
-                  <h3>Service 1</h3>
-                  <p>Custom software development to streamline your business operations.</p>
+                <h2>Our Services</h2>
+                <div class="service-list">
+                    <div class="service-item">
+                        <h3>Service 1</h3>
+                        <p>Custom software development to streamline your business operations.</p>
+                    </div>
+                    <div class="service-item">
+                        <h3>Service 2</h3>
+                        <p>IT consulting to optimize your technology infrastructure.</p>
+                    </div>
+                    <div class="service-item">
+                        <h3>Service 3</h3>
+                        <p>Digital marketing strategies to boost your online presence.</p>
+                    </div>
+                    <div class="service-item">
+                        <h3>Service 4</h3>
+                        <p>Data analytics and business intelligence for informed decision-making.</p>
+                    </div>
                 </div>
-                <div class="service-item">
-                  <h3>Service 2</h3>
-                  <p>IT consulting to optimize your technology infrastructure.</p>
-                </div>
-                <div class="service-item">
-                  <h3>Service 3</h3>
-                  <p>Digital marketing strategies to boost your online presence.</p>
-                </div>
-                <div class="service-item">
-                  <h3>Service 4</h3>
-                  <p>Data analytics and business intelligence for informed decision-making.</p>
-                </div>
-              </div>
             </div>
-          </section>
-        
-          <section class="why-choose-us">
+        </section>
+
+        <!-- Why Choose Us Section -->
+        <section class="why-choose-us">
             <div class="container">
-              <h2>Why Choose RK Solution?</h2>
-              <ul>
-                <li><strong>Expertise:</strong> Highly skilled professionals with years of experience.</li>
-                <li><strong>Custom Solutions:</strong> Tailored services to fit your needs.</li>
-                <li><strong>Customer-Centric Approach:</strong> Your success is our priority.</li>
-                <li><strong>Innovation:</strong> Leveraging the latest technologies and trends.</li>
-              </ul>
+                <h2>Why Choose RK Solution?</h2>
+                <ul>
+                    <li><strong>Expertise:</strong> Highly skilled professionals with years of experience.</li>
+                    <li><strong>Custom Solutions:</strong> Tailored services to fit your needs.</li>
+                    <li><strong>Customer-Centric Approach:</strong> Your success is our priority.</li>
+                    <li><strong>Innovation:</strong> Leveraging the latest technologies and trends.</li>
+                </ul>
             </div>
-          </section>
-        </main>
-        <footer>
-          <section class="#contact" id="contact">
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
             <div class="container">
-              <h2>Get in Touch</h2>
-              <p>Ready to take your business to the next level? Contact us today!</p>
-              <ul>
-                <li><strong>Email:</strong> info@rktechsolution.com</li>
-                <li><strong>Phone:</strong> +91 91000 2XXX</li>
-                <li><strong>Website:</strong> <a href="https://www.RKtechsolutions.com">www.RKtechsolution.com</a></li>
-                <li><strong>Address:</strong> 123 Business Street, Hydreabad, India</li>
-              </ul>
+                <h2>Get in Touch</h2>
+                <p>Ready to take your business to the next level? Contact us today!</p>
+                <ul>
+                    <li><strong>Email:</strong> info@rktechsolution.com</li>
+                    <li><strong>Phone:</strong> +91 91000 2XXX</li>
+                    <li><strong>Website:</strong> <a href="https://www.RKtechsolutions.com">www.RKtechsolution.com</a></li>
+                    <li><strong>Address:</strong> 123 Business Street, Hyderabad, India</li>
+                </ul>
             </div>
-          </section>
-        
-   
-    <div class="container">
-        <p>&copy;RK Solution. All rights reserved.</p>
-      </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 RK Solution. All rights reserved.</p>
+        </div>
     </footer>
 </body>
 </html>
